@@ -99,6 +99,29 @@ html {
     margin-top: var(--header-height);
 }
 
+/*---- Reactive Section ----*/
+@media (max-width: 1000px) {
+    .navbar-content {
+        font-size: 2rem;
+    }
+    .logo-border {
+        font-size: 1.75rem;
+        border: 0.5rem solid var(--milk);
+    }
+    .logo-wrapper {
+        border: 0.4rem;
+    }
+    #welcome-section {
+        width: 100%;
+        margin: 0;
+        background-color: var(--bg-color);
+    }
+    .introduction {
+        font-size: 5rem;
+    }
+}
+
+
 /*-------------- Navbar Section ---------------*/
 
 #navbar /*<header>*/
@@ -106,6 +129,7 @@ html {
     background-color: black;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100vw;
     z-index: 10;
 }
@@ -124,7 +148,7 @@ html {
 {
     color: var(--milk);
     text-decoration: none;
-    padding: 8px;
+    padding: 0.6rem;
     border: solid var(--spinetta-color);
     display: flex;
     font-family: 'NocturneSerif-ExtraBold', 'nocturne-serif', 'serif';
@@ -143,7 +167,7 @@ html {
 
 .logo-border 
 {
-    border: solid 4px var(--milk);
+    border: solid .25rem var(--milk);
     display: flex;
     transition: border-color .225s ease-in-out .14s;
 }
@@ -194,6 +218,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center; 
+    font-size: 10rem;
     /*margin-right: 2.5rem;*/   
 }   
 
@@ -212,7 +237,7 @@ html {
     margin-bottom: 0;
     max-width: 100%;
     flex-wrap: wrap;
-    font-size: 55px;
+    font-size: 4rem;
     gap: 1rem;
 }
 
@@ -245,11 +270,11 @@ html {
     .title-welcome:nth-of-type(.btn){
         flex-direction: column;
         align-items: center;
-        font-size: 55px;
+        font-size: 5rem;
     }
 
     h1 {
-        font-size: 38px;
+        font-size: 2.5rem;
     }
 
     .wave {
@@ -267,6 +292,9 @@ html {
         text-align: center;
         flex-direction: column;
     }
+    .title-welcome h1 {
+
+    }
 }
 
 .btn-wrapper {
@@ -278,8 +306,8 @@ html {
 }
 
 .welcome-btn {
-    margin: 50px auto;
-    width: 35rem;
+    margin: 6rem auto;
+    width: 35vw;
     height: 3rem;
 }
 
