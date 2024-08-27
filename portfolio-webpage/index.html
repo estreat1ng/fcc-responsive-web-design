@@ -11,7 +11,7 @@
     <body>
 
       <!----- Navbar ----->
-      
+      <!--Testeando 1234 hola si 3 de jamon y queso-->
       <header id="navbar">
         <div class="background"></div>
         <div class="navbar-content">
@@ -55,7 +55,7 @@
             </div>
 
             <div class="btn-wrapper welcome-btn">
-              <a class="btn-scroll transparent-black" href="#projects">▼</a>
+              <a class="btn-scroll transparent" href="#projects">▼</a>
             </div>
 
           </div>
@@ -107,16 +107,16 @@
 
         <!----- Contact Section ----->
 
-        <section id="contact">
-          <div class="contact-title">
+        <section class="contact__section">
+          <div class="contact__section__title">
             <h1 class="underline title">Contact Me</h1>
-            <p>
+            <p class="contact__section__text">
               I'll answer you asap, or you could send me an email in 
               <b>matiasariettodev@gmail.com</b>.
             
             </p>
             <form 
-              id="contact-form" 
+              class="contact__form" 
               method="POST" 
               action="https://formspree.io/f/moqgzopq"
             >
@@ -124,7 +124,7 @@
                 type="text" 
                 name="name" 
                 id="name" 
-                class="form-input" 
+                class="contact__form__input" 
                 placeholder="Name" 
                 required
               >
@@ -132,14 +132,14 @@
                 type="email" 
                 name="email" 
                 id="email" 
-                class="form-input" 
+                class="contact__form__input" 
                 placeholder="Email" 
                 required
               >
               <textarea 
                 style="resize: none;" 
                 id="message" 
-                class="form-input" 
+                class="contact__form__input" 
                 placeholder="Message"
               ></textarea>
             <div class="submit-wrapper">
