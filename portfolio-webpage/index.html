@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta content="width=device-width, initial-scale=1.0" />
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <title>Estreating's Portfolio</title>
+
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+      <!----- Navbar ----->
+      
+      <header id="navbar">
+        <div class="background"></div>
+        <div class="navbar-content">
+        <div class="logo-wrapper">
+          <div class="logo-border">
+            <a href="/" id="logo">ma</a>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a href="#projects" class="nav-link">Projects</a>
+         </li>
+          <li>
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        </div>
+        <nav>
+        </nav>
+      </header>
+
+
+      <div class="page-wrapper">
+
+        <!----- Welcome/Hero Section ----->
+
+        <section id="welcome-section">
+          <div class="title-welcome">
+            <h2 class="wave">Hi there <span class="transparent">,</span></h2>
+            <h1 class="introduction">
+              I'm 
+              <span class="underline name transparent">Matias</span><span class="">;</span>
+              <span class="spacer">an</span>
+              <span class="wrapper">
+                <span class="highlighter">Front-end</span> 
+              <span class="transparent">Developer</span>
+              </span>
+            </h1>
+            <div class="btn-wrapper welcome-btn">
+              <a class="btn" href="#contact">Let's Talk</a>
+            </div>
+
+            <div class="btn-wrapper welcome-btn">
+              <a class="btn-scroll transparent-black" href="#projects">▼</a>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!----- Projects Section ----->
+
+        <section id="projects">
+        <div class="project-tile">
+          <div class="sctn-title-wrapper">
+            <h1 class="title underline">Projects</h1>
+          </div>
+          <div class="separator"></div>
+            <div class="project-box">
+              <div class="project-title">
+                <h3 class="box-title">Service Landing Page</h3>
+                <i class='bx bxl-css3'></i>
+                <i class='bx bxl-html5' ></i>
+                <a id="profile-link" href="https://codepen.io/estreat1n9" target="_blank"><i class='bx bxl-codepen'></i></a>
+              </div>
+              <p class="codepen" 
+              data-height="700" 
+              data-theme-id="dark" 
+              data-default-tab="result" 
+              data-slug-hash="eYaNNZN" 
+              data-pen-title="Elo Boost Page" 
+              data-user="estreat1n9" 
+              style=
+              "
+                height: 725px; 
+                box-sizing: border-box; 
+                display: flex;
+                align-items: center; 
+                justify-content: center; 
+                border: 2px solid; 
+                margin: 1em 0; 
+                padding: 1em;
+              ">
+                <span>See the Pen <a href="https://codepen.io/estreat1n9/pen/eYaNNZN">
+                Elo Boost Page</a> by estreat1ng (<a href="https://codepen.io/estreat1n9">@estreat1n9</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            
+          </div>
+        </div>
+        </section>
+
+        <!----- Contact Section ----->
+
+        <section id="contact">
+          <div class="contact-title">
+            <h1 class="underline title">Contact Me</h1>
+            <p>
+              I'll answer you asap, or you could send me an email in 
+              <b>matiasariettodev@gmail.com</b>.
+            
+            </p>
+            <form 
+              id="contact-form" 
+              method="POST" 
+              action="https://formspree.io/f/moqgzopq"
+            >
+              <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                class="form-input" 
+                placeholder="Name" 
+                required
+              >
+              <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                class="form-input" 
+                placeholder="Email" 
+                required
+              >
+              <textarea 
+                style="resize: none;" 
+                id="message" 
+                class="form-input" 
+                placeholder="Message"
+              ></textarea>
+            <div class="submit-wrapper">
+              <button class="submit-btn" type="submit">Submit</button>
+            </div>
+            </form>
+          </div>
+        </section>
+
+        <!----- Footer ----->
+
+        <footer>
+          <span>Copyright 2024©, Matias Arietto Portfolio.</span>
+        </footer>
+      </div>
+    </body>
+  </html>

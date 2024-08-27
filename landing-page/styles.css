@@ -1,0 +1,563 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 { font-family: Georgia, Times, "Times New Roman", serif; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } h3 { font-family: Georgia, Times, "Times New Roman", serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } p { font-family: Georgia, Times, "Times New Roman", serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } blockquote { font-family: Georgia, Times, "Times New Roman", serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } pre { font-family: Georgia, Times, "Times New Roman", serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 10px; /* 1rem = 10px */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  color: linen;
+  background-color: rgb(22, 22, 22);
+  padding: 0;
+  margin: 0;
+}
+
+.white {
+  color: #fdf0d5;
+}
+
+.orange {
+  color: #fcbf49;
+}
+
+.underlined {
+  text-decoration: underline;
+  text-decoration-color: #fcbf49;
+}
+
+/*Navigation Bar*/
+
+.header-logo {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5.5rem;
+  z-index: 5;
+  color: linen;
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  flex-direction: row; /*Agregar media query al h1 del header, por que cuando se achica se overflowea/desborda*/
+}
+
+#header-img {
+  position: absolute;
+  right: 0;
+  width: 75px;
+  height: 5.5rem;
+  aspect-ratio: 1/1;
+  margin: 0 5px;
+}
+
+
+#nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+  align-items: center;
+  flex-direction: flex-start;
+  font-size: 15px;
+  padding: 2rem;
+  margin: 0 2rem;
+  list-style: none;
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: linen;
+}
+
+nav a:visited {
+  color: linen;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid gold;
+  padding-bottom: 8px;
+  color: white;
+}
+
+/*Hero Section*/
+
+#Home {
+  background: url('https://steamuserimages-a.akamaihd.net/ugc/2540662890179986213/5E8E224F8D1E8391D296186BEF4B0EDBD20FFAFE/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1vh;
+  overflow: hidden;
+  margin-top: 55px;
+
+}
+
+#Home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 -1vh;
+  background-image: inherit;
+  filter: blur(14px);
+  opacity: 1;
+  z-index: 0;
+  background-size: cover;
+}
+
+.hero-content {
+  position: relative;
+  top: -6rem;
+  text-align: center;
+  color: #003049;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+}
+
+.hero-content h2 {
+  font-size: 30px;
+  color: white;
+}
+
+.hero-content h2:first-of-type {
+  margin-top: 8rem;
+  font-size: 30px;
+}
+
+.hero-content p {
+  color: rgb(237, 237, 237);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.hero-content p > span:first-of-type {
+  border-bottom: solid 2px white;
+   color: #fcbf49;
+}
+
+.hero-content p > span:last-of-type:hover {
+  color: #fdf0d5;
+}
+
+.hero-content h1:first-of-type {
+  padding: 1rem 0;
+   -webkit-text-stroke: 1px white;
+   color: #ffffff;
+}
+
+.hero-content h1:nth-of-type(2) {
+  font-size: 60px;
+  margin: 5rem 0 0 0;
+  -webkit-text-stroke: 0.5px white;
+}
+
+.hero-content h1:last-of-type {
+  text-decoration: underline;
+  text-decoration-color: #fcbf49;
+  padding: 1rem 0;
+  -webkit-text-stroke: 1.4px white;
+   color: white;
+}
+
+#cta-button {
+  text-decoration: unset;
+  background-color: #fcbf49;
+  color: #003049;
+  font-size: 2rem;
+  padding: 13px 40px 13px 40px;
+  border-radius: 27px;
+	font-family: Tahoma,Verdana,Segoe,sans-serif; 
+  cursor: pointer;
+  transition: 225ms;
+  position: relative;
+  top: 50px;
+}
+
+#cta-button:visited {
+  color: white;
+}
+
+#cta-button:hover {
+  color: #fcbf49;
+  background-color: #003049;
+}
+
+
+/*Features Section*/
+
+#Features {
+  margin-top: 10rem;
+  scroll-margin-top: 100px;
+
+}
+
+.Features-title h1 {
+  font-size: 35px;
+  text-align: center;
+}
+
+#Features p {
+  font-family: Helvetica; 
+
+}
+
+/*Features Icons*/
+
+.flex {
+  display: flex;
+  
+}
+
+#Icons {
+  margin: 10rem auto;
+  
+}
+
+i {
+  font-size: 4.7rem;
+  color: rgb(224, 194, 26);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 7rem;
+  margin-left: 10px;
+  flex-direction: row;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 5px;
+  width: 80vw;
+  
+}
+
+.icon-text h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 23px;
+}
+
+.icon-text p {
+  margin-top: 5px;
+  font-family: Helvetica, serif;
+}
+
+/*How It Works (Video)*/
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+#video {
+  width: 600px; 
+  height: 320px;
+}
+
+.video h2 {
+  font-size: 2rem;
+  background-color:  #fcbf49f0;
+  text-align: center;
+}
+
+.video h2::after {
+  display: block;
+  content: "↓";
+  background-color: rgb(21, 22, 21);
+  margin-bottom: -10px;
+}
+
+/*Our Services Section*/
+
+#Services {
+    text-align: center;
+    margin-top: 10rem;
+    scroll-margin-top: 100px;
+  }
+
+#Services p {
+  font-family: Helvetica;
+}
+
+#Services h1 {
+    font-size: 35px;
+  }
+
+.list {
+  width: 100%;
+  
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#Services ul {
+  font-size: 2rem;
+  text-align: center;
+  margin-left: -3rem;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  grid-auto-flow: column;
+}
+
+#Services li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 1rem;
+  }
+
+#Services li:first-of-type:before {
+  content: "•";
+  color: rgb(243, 134, 243);
+  margin-right: 1.5rem;
+}
+
+#Services li:nth-of-type(2):before {
+  content: "•";
+  color: rgb(255, 0, 0);
+  margin-right: 1.5rem;
+}
+
+#Services li:last-of-type:before {
+    content: "•";
+  color: #ffc655;
+  margin-right: 1.5rem;
+}
+
+#Services p:nth-of-type(2) {
+  margin-top: 0;
+}
+
+/*Services Items*/
+
+
+
+/*Contact Us Section*/
+
+#Contact_Us {
+  margin-top: 30rem;
+  text-align: center;
+}
+
+#Contact_Us h1 {
+  font-size: 35px;
+}
+
+#form {
+  margin-bottom: 15rem;
+}
+
+input[type="email"], input[type="text"] {
+  display: block;
+  background-color: rgba(39, 38, 38, 0.6);
+  color: white;
+  border: solid 1px white;
+  border-radius: 3px;
+  margin: 2rem auto;
+  width: 600px;
+  height: 35px;
+  max-width: 600px;
+  min-width: 200px
+}
+
+input[type="email"]:hover, input[type="text"]:hover {
+  border: solid 1px #fcbf49;
+}
+
+input::placeholder {
+  text-indent: 5px;
+}
+
+input[type="submit"] {
+  background-color: #fcbf49;
+  color: white;
+  border: unset;
+  border-bottom: solid 4px #d29e35;
+  border-radius: 2px;
+  padding: 15px 50px;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+input[type="submit"]:hover {
+
+  background-color: white;
+  color: #fcbf49;
+  transition: 200ms;
+  cursor: pointer;
+  border-bottom: solid 2px rgb(212, 211, 211);
+}
+
+/*Footer CSS*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 55px;
+  color: rgb(158, 158, 158);
+  text-align: left;
+  font-size: 1.5rem;
+  margin-top: 10rem;
+  border-top: solid 1px rgba(180, 180, 180, 0.2);
+}
+
+.footer-text {
+  margin-left: 4rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: rgb(158, 158, 158);
+  display: flex;
+  margin-right: 4rem;
+  padding: 0;
+}
+
+.footer-link:visited {
+  color: rgb(158, 158, 158);
+}
+
+.footer-link:hover {
+  border-bottom: solid 1px gold;
+  color: linen;
+}
+
+.number-container {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.number-container:hover .c1 {
+  color: rgb(67, 67, 224);
+}
+
+.number-container:hover .c2 {
+  color: rgb(243, 4, 243);
+}
+
+.number-container:hover .c3 {
+  color: red;
+}
+
+.number-container:hover .c4 {
+  color: rgb(248, 210, 0);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/*Media Queries*/
+
+@media (max-width: 250px) {
+  .footer-text {
+    font-size: 1.2rem;
+  }
+  .footer {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media  (max-width: 550px) {
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+  #video {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media  (max-width: 420px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  #header {
+    position: flex;
+    justify-content: center;
+    z-index: 5;
+    height: auto;
+  }
+  #nav-bar ul {
+    
+    flex-direction: column;
+    gap: 7px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 6rem;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  } 
+  #header-img {
+    display: block;
+  }
+  .header-logo {
+    position: relative;
+  }
+  #video {
+    width: auto;
+    height: auto;
+  }
+}
+
+
+/*Font Families*/
+
+.Times-New-Roman {
+  font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
+}
+
+.Futura-font {
+  font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+  font-weight: 400;
+  
+}
+
+.Georgia-font {
+  font-family: Georgia,Times,Times New Roman,serif; 
+}
